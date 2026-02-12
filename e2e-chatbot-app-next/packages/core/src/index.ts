@@ -4,4 +4,6 @@ export * from './utils';
 export * from './chat-acl';
 export * from './stream-cache';
 export * from './schemas/chat';
+export * from './schemas/offer';
+export * from './offer-guidelines';
 export * from './ai/providers';

@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/sidebar';
 import { Link } from 'react-router-dom';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
-import { PlusIcon } from 'lucide-react';
+import { PlusIcon, SparklesIcon } from 'lucide-react';
 import type { ClientSession } from '@chat-template/auth';
 
 export function AppSidebar({
@@ -64,6 +64,19 @@ export function AppSidebar({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
+        <div className="px-2 py-1">
+          <Button
+            variant="outline"
+            className="w-full justify-start gap-2"
+            onClick={() => {
+              setOpenMobile(false);
+              navigate('/offers');
+            }}
+          >
+            <SparklesIcon className="h-4 w-4" />
+            Offer Copy Generator
+          </Button>
+        </div>
         <SidebarHistory user={user} />
       </SidebarContent>
       <SidebarFooter>
